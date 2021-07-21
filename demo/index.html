@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+    skhemata-gdpr {
+      --skhemata-gdpr-color: red;
+      --skhemata-gdpr-background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit-html';
+    import '../dist/skhemata-gdpr.js';
+    // For testing purposes, its best to clear localStorage to allow contentSeen to be used again
+    let data = {
+      link: 'google.com'
+    };
+    render(
+      html`
+        <skhemata-gdpr config-data=${JSON.stringify(data)}>
+        </skhemata-gdpr>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>

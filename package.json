@@ -1,0 +1,42 @@
+{
+  "name": "@skhemata/skhemata-gdpr",
+  "version": "1.1.0",
+  "description": "Skhemata Site GDPR Web Component. This web component provides basic website GDPR functionality.",
+  "author": "skhemata-gdpr",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "license": "https://raw.githubusercontent.com/skhemata/skhemata-gdpr/master/LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skhemata/skhemata-gdpr.git"
+  },
+  "keywords": [
+    "skhemata",
+    "gdpr",
+    "web component"
+  ],
+  "scripts": {
+    "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "tsc && wtr --coverage",
+    "test:watch": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wtr --watch\"",
+    "storybook": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds -c .storybook/server.mjs\"",
+    "storybook:build": "tsc && build-storybook"
+  },
+  "dependencies": {
+    "@skhemata/skhemata-base": "^1.1.0",
+    "@storybook/addon-controls": "^6.3.0",
+    "lit": "^2.0.0-rc.2",
+    "lit-html": "^2.0.0-rc.3"
+  },
+  "devDependencies": {
+    "@open-wc/testing": "^2.5.33",
+    "@web/dev-server": "^0.1.17",
+    "@web/dev-server-storybook": "^0.3.6-next.0",
+    "@web/test-runner": "^0.12.20",
+    "concurrently": "^5.3.0",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.4"
+  }
+}
