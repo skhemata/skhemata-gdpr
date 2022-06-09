@@ -63,7 +63,14 @@ export default {
         },
       },
     },
-  }
+  },
+  parameters: {
+    widgetCode: `
+    <skhemata-gdpr config-data='{"link":"google.com"}'></skhemata-gdpr>
+
+    <script type="module" src="https://cdn.jsdelivr.net/gh/alexey432/test-gdpr-1/index.js"></script> 
+    `,
+  },
 };
 
 
